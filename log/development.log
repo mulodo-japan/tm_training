@@ -378,3 +378,217 @@ Migrating to CreateMicroposts (20140402013415)
   [1m[35mSQL (1.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140402013415"]]
   [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/microposts" for 127.0.0.1 at 2014-04-02 10:39:38 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MicropostsController#index as HTML
+  [1m[35mMicropost Load (0.2ms)[0m  SELECT "microposts".* FROM "microposts"
+  Rendered microposts/index.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 202ms (Views: 181.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/microposts.css?body=1" for 127.0.0.1 at 2014-04-02 10:39:38 +0900
+
+
+Started GET "/assets/microposts.js?body=1" for 127.0.0.1 at 2014-04-02 10:39:38 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-02 10:39:38 +0900
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-02 10:39:38 +0900
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-02 10:39:38 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-02 10:39:38 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-02 10:39:38 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-02 10:39:38 +0900
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-02 10:39:38 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-02 10:39:38 +0900
+
+
+Started GET "/microposts/new" for 127.0.0.1 at 2014-04-02 10:42:09 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MicropostsController#new as HTML
+  Rendered microposts/_form.html.erb (15.9ms)
+  Rendered microposts/new.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 93ms (Views: 70.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/microposts" for 127.0.0.1 at 2014-04-02 10:43:12 +0900
+Processing by MicropostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rR0NhJDeuV36qRMV0ImWAhBKMdFGOb59I8ruYhBuvA8=", "micropost"=>{"content"=>"First content", "user_id"=>"1"}, "commit"=>"Create Micropost"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (5.1ms)[0m  [1mINSERT INTO "microposts" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "First content"], ["created_at", Wed, 02 Apr 2014 01:43:12 UTC +00:00], ["updated_at", Wed, 02 Apr 2014 01:43:12 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/microposts/1
+Completed 302 Found in 9ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/microposts/1" for 127.0.0.1 at 2014-04-02 10:43:12 +0900
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMicropost Load (0.2ms)[0m  [1mSELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered microposts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/microposts.css?body=1" for 127.0.0.1 at 2014-04-02 10:43:12 +0900
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-02 10:43:12 +0900
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-02 10:43:12 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-02 10:43:12 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-02 10:43:12 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-02 10:43:12 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-02 10:43:12 +0900
+
+
+Started GET "/assets/microposts.js?body=1" for 127.0.0.1 at 2014-04-02 10:43:12 +0900
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-02 10:43:12 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-02 10:43:12 +0900
+
+
+Started GET "/microposts" for 127.0.0.1 at 2014-04-02 10:43:14 +0900
+Processing by MicropostsController#index as HTML
+  [1m[35mMicropost Load (0.2ms)[0m  SELECT "microposts".* FROM "microposts"
+  Rendered microposts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/microposts/new" for 127.0.0.1 at 2014-04-02 10:43:17 +0900
+Processing by MicropostsController#new as HTML
+  Rendered microposts/_form.html.erb (1.6ms)
+  Rendered microposts/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/microposts" for 127.0.0.1 at 2014-04-02 10:43:22 +0900
+Processing by MicropostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rR0NhJDeuV36qRMV0ImWAhBKMdFGOb59I8ruYhBuvA8=", "micropost"=>{"content"=>"Second content", "user_id"=>"2"}, "commit"=>"Create Micropost"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "microposts" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "Second content"], ["created_at", Wed, 02 Apr 2014 01:43:22 UTC +00:00], ["updated_at", Wed, 02 Apr 2014 01:43:22 UTC +00:00], ["user_id", 2]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/microposts/2
+Completed 302 Found in 3ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/microposts/2" for 127.0.0.1 at 2014-04-02 10:43:22 +0900
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMicropost Load (0.1ms)[0m  SELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered microposts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-02 10:43:22 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-02 10:43:22 +0900
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-02 10:43:22 +0900
+
+
+Started GET "/assets/microposts.css?body=1" for 127.0.0.1 at 2014-04-02 10:43:22 +0900
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-02 10:43:22 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-02 10:43:22 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-02 10:43:22 +0900
+
+
+Started GET "/assets/microposts.js?body=1" for 127.0.0.1 at 2014-04-02 10:43:22 +0900
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-02 10:43:22 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-02 10:43:22 +0900
+
+
+Started GET "/microposts" for 127.0.0.1 at 2014-04-02 10:43:24 +0900
+Processing by MicropostsController#index as HTML
+  [1m[36mMicropost Load (0.1ms)[0m  [1mSELECT "microposts".* FROM "microposts"[0m
+  Rendered microposts/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/microposts/1/edit" for 127.0.0.1 at 2014-04-02 10:45:35 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MicropostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMicropost Load (0.3ms)[0m  SELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered microposts/_form.html.erb (13.7ms)
+  Rendered microposts/edit.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 100ms (Views: 68.4ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/microposts/1" for 127.0.0.1 at 2014-04-02 10:45:48 +0900
+Processing by MicropostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rR0NhJDeuV36qRMV0ImWAhBKMdFGOb59I8ruYhBuvA8=", "micropost"=>{"content"=>"First contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst contentFirst content", "user_id"=>"1"}, "commit"=>"Update Micropost", "id"=>"1"}
+  [1m[36mMicropost Load (0.1ms)[0m  [1mSELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered microposts/_form.html.erb (2.7ms)
+  Rendered microposts/edit.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-02 10:45:49 +0900
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-02 10:45:49 +0900
+
+
+Started GET "/assets/microposts.css?body=1" for 127.0.0.1 at 2014-04-02 10:45:49 +0900
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-02 10:45:49 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-02 10:45:49 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-02 10:45:49 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-02 10:45:49 +0900
+
+
+Started GET "/assets/microposts.js?body=1" for 127.0.0.1 at 2014-04-02 10:45:49 +0900
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-02 10:45:49 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-02 10:45:49 +0900
