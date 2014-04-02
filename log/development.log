@@ -592,3 +592,5 @@ Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-02 10:45:49 +0900
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-02 10:45:49 +0900
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mMicropost Load (2.5ms)[0m  SELECT "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ?  [["user_id", 1]]
