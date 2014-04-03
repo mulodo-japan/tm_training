@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-TmTraining::Application.load_tasks
+GitTest::Application.load_tasks
