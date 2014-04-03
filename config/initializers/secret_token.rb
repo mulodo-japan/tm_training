@@ -9,4 +9,19 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-GitTest::Application.config.secret_key_base = '03e8feb4edd37e5401587163bfa4834a3d347026392adac66db6dbb34702bc6e18f77208dca4b212287ef336d073d545d146b1aee82fce3c5c05744d00e91d7e'
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+GitTest::Application.config.secret_key_base = secure_token
