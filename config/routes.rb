@@ -1,5 +1,7 @@
 GitTest::Application.routes.draw do
 
+  resources :users
+
   # get "users/new"
   # get "static_pages/help"
   # get "static_pages/contact"
